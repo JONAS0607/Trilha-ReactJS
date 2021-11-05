@@ -1,8 +1,9 @@
 # 🔃 PASSOS DO PROJETO
 
-## 🚩 Remover pacotes
+## 📗 CONFIGURANDO O AMBIENTE
 
-1. 💻 `yarn remove sass` _mais o nome do pacote em questão no exemplo removemos o sass_
+<details>
+<summary><strong> ✅ Para rodar </strong></summary>
 
 ## 🚩 Executando a aplicação
 
@@ -11,6 +12,11 @@
 1. 💻 `yarn dev` _após configuração do script no package.json, este comando é configurado para o ambiente de desenvolvimento_
 1. 💻 `yarn build` _para ambiente de produção_
 
+## 🚩 Remover pacotes
+
+1. 💻 `yarn remove sass` _mais o nome do pacote em questão no exemplo removemos o sass_
+
+</details>
 <details>
 <summary><strong> 🔽 Instalações do projeto </strong></summary>
 
