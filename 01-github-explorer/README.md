@@ -15,9 +15,10 @@
 1. 💻 `yarn remove sass` _mais o nome do pacote em questão no exemplo removemos o sass_
 
 </details>
-<details>
 
 ### 📗 CONFIGURANDO O AMBIENTE
+
+<details>
 
 <summary><h2 style="display:inline;"> 🔽 Instalações do projeto </h2></summary>
 
@@ -39,9 +40,10 @@
 1. 💻 `yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh` _REACT REFRESH para guardar o valor dos estados quando alterado o código da aplicação_
 
 </details>
-<details>
 
 ### 📢 EXPLICAÇÕES ESPECIFICAS
+
+<details>
 
 <summary><h2 style="display:inline;"> ✅ Explicações </h2></summary>
 
@@ -60,10 +62,10 @@ export function App() {
 1. 💻 **Imutabilidade** _Preve que uma variável não podera ter o valor alterado, ou seja para adicionar uma informação em uma array existente ele em vez de alterar e adicionar, pega a array faz uma copia ou seja rescreve a array criando uma nova e adiciona o valor desejado_
 1. 💻 **Fast refresh** _forma de alterar o código da aplicação, mantendo o estado dos componentes valores já adicionados nas variáveis_
 </details>
-<details>
 
 ### 📁 PASTAS DO PROJETO
 
+<details>
 <summary><h2 style="display:inline;"> 🔽 Pastas e arquivos do projeto </h2></summary>
 
 <details>
@@ -155,7 +157,7 @@ module.exports = {
 ```
 
 - 📄 yarn.lock ➡ **_configura automaticamente_**
-</details>
+
 <details>
 <summary><strong> 📁 src </strong></summary>
 
@@ -192,7 +194,6 @@ import { render } from "react-dom";
 render(<App />, document.getElementById("root"));
 ```
 
-</details>
 <details>
 <summary><strong> 📁 styles </strong></summary>
 
@@ -270,7 +271,7 @@ export function RepositoryList() {
 ```
 
 </details>
-
+</details>
 </details>
 <details>
 <summary><strong> 📁 public </strong></summary>
