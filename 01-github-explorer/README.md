@@ -16,8 +16,6 @@
 
 </details>
 
-### <h3 style="display:none;">📗 CONFIGURANDO O AMBIENTE </h3>
-
 <details>
 
 <summary ><strong> 🔽 Instalações do projeto </strong></summary>
@@ -41,8 +39,6 @@
 
 </details>
 
-### <h3 style="display:none;"> 📢 EXPLICAÇÕES ESPECIFICAS </h3>
-
 <details>
 
 <summary ><strong> ✅ Explicações </strong></summary>
@@ -62,8 +58,6 @@ export function App() {
 1. 💻 **Imutabilidade** _Preve que uma variável não podera ter o valor alterado, ou seja para adicionar uma informação em uma array existente ele em vez de alterar e adicionar, pega a array faz uma copia ou seja rescreve a array criando uma nova e adiciona o valor desejado_
 1. 💻 **Fast refresh** _forma de alterar o código da aplicação, mantendo o estado dos componentes valores já adicionados nas variáveis_
 </details>
-
-### <h3 style="display:none;">📁 PASTAS DO PROJETO</h3>
 
 <details>
 <summary ><strong> 🔽 Pastas e arquivos do projeto </strong></summary>
