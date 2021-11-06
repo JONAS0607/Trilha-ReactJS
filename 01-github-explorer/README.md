@@ -16,9 +16,10 @@
 
 </details>
 
-<h3 hidden>📗 CONFIGURANDO O AMBIENTE </h3>
+### <h3 style="display:none;">📗 CONFIGURANDO O AMBIENTE </h3>
 
 <details>
+
 <summary ><strong> 🔽 Instalações do projeto </strong></summary>
 
 1. 💻 `yarn init -y`
@@ -39,7 +40,8 @@
 1. 💻 `yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh` _REACT REFRESH para guardar o valor dos estados quando alterado o código da aplicação_
 
 </details>
-<h3 hidden> 📢 EXPLICAÇÕES ESPECIFICAS </h3>
+
+### <h3 style="display:none;"> 📢 EXPLICAÇÕES ESPECIFICAS </h3>
 
 <details>
 
@@ -61,7 +63,7 @@ export function App() {
 1. 💻 **Fast refresh** _forma de alterar o código da aplicação, mantendo o estado dos componentes valores já adicionados nas variáveis_
 </details>
 
-<h3 hidden>📁 PASTAS DO PROJETO</h3>
+### <h3 style="display:none;">📁 PASTAS DO PROJETO</h3>
 
 <details>
 <summary ><strong> 🔽 Pastas e arquivos do projeto </strong></summary>
