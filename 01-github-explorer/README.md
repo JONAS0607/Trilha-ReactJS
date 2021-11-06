@@ -14,6 +14,36 @@
 
 1. 💻 `yarn remove sass` _mais o nome do pacote em questão no exemplo removemos o sass_
 
+### 🚩 Usando Typescript
+
+1. 💻 **Typescript** _vantagens do typescript quando temos varios Devs, um `superset` que trabalha em cima do js pode ser chamada de linguagem, o typescript permite especificar fazer `tipagem` o tipo de dado que esta vindo para ser consumido exemplo de utilização:_
+
+```ts
+type User = {
+  name: string;
+  email: string;
+  address: {
+    city: string;
+    state?: string; //a interrogação faz com que a variável seja opcional
+  };
+};
+
+function showWelcomeMessage(user: User) {
+  return `Welcome ${user.name}, your e-mail is ${user.email}, your city is ${user.address.city} and you state is ${user.address.state && 'default'}`;
+}
+const user {
+  name: 'Jonas',
+  email: "jonas@gmail.com",
+  address:{
+    city: 'São Bento',
+    state: 'SC',
+  }
+}
+const message = showWelcomeMessage(user);
+```
+
+### 🚩 PROGRAMANDO
+
 </details>
 
 <details>
@@ -37,6 +67,14 @@
 1. 💻 `yarn add sass-loader -D` _pré processador para estilos css usado para otimizar a criação de layouts podendo usar o encadeamento de propriedades_
 1. 💻 `yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh` _REACT REFRESH para guardar o valor dos estados quando alterado o código da aplicação_
 
+### 🚩 Quando formos usar o typescript
+
+1. 💻 `yarn add typescript -D` _adiciona o typescript para desenvolvimento_
+1. 💻 `yarn tsc --init` _inicializa o typescript na aplicação criando tsconfig.json no root, algumas mudanças precisam ser feitas neste arquivo_
+1. 💻 `yarn add @babel/preset-typescript -D` _para que o babel entenda o typescript_
+1. 💻 `yarn add @types/react -D` _para que o react entenda o typescript_ caso a biblioteca não esteja incluida na instalação do react `node_modules/@types/react/index`
+1. 💻 `yarn add @types/react-dom -D` _para que o react entenda o typescript_
+
 </details>
 
 <details>
@@ -54,9 +92,13 @@ export function App() {
 
 1. 💻 **Utilização de variáveis com interpolação** _Dentro dos componentes fica facil a utilização de variáveis junto com o html uma das vantagens de usar o REACTJS_
 1. 💻 **Propriedades no React** _Permite a utilização de componetes dentro de componetes, podendo o componente pai enviar informações para o componente filho_
-1. 💻 **Conceito de estado** _para usar mais de um componente no return usa-se o `fragment do react e envolve os componentes <> <Component/> </>` sempre que um modulo form importado e ele iniciar com 'use' chamamos isso de `hook -> gancho` no caso importamos o `useState` do react, quando usamos o useState ele nos retorna uma array e para usar esta variável precisamos `desestruturar a variável`, Estado uma forma de modificar a variável para refletir as mudanças na interface_
+1. 💻 **Conceito de estado** _para usar mais de um componente no return usa-se o `fragment do react e envolve os componentes <> <Component/> </>` sempre que um modulo for importado e ele iniciar com 'use' chamamos isso de `hook -> gancho` no caso importamos o `useState` do react, quando usamos o useState ele nos retorna uma array e para usar esta variável precisamos `desestruturar a variável`, Estado uma forma de modificar a variável para refletir as mudanças na interface_
 1. 💻 **Imutabilidade** _Preve que uma variável não podera ter o valor alterado, ou seja para adicionar uma informação em uma array existente ele em vez de alterar e adicionar, pega a array faz uma copia ou seja rescreve a array criando uma nova e adiciona o valor desejado_
 1. 💻 **Fast refresh** _forma de alterar o código da aplicação, mantendo o estado dos componentes valores já adicionados nas variáveis_
+1. 💻 **Usando API do github** _`api.github.com/users/JONAS0607` basta colocar no browser e verificar os dados que ele traz_
+1. 💻 **Usando estado useEffect** _em conjunto com API, assim como o useState serve para disparar uma função quando algo acontecer como a mudança de uma variável avisando o aplicativo da mudança, quando a array do useEffect estiver vazia a função vai ser executada apenas uma vez quando o componente for usado, **importante** nunca esquecer o segundo parametro ou seja a array_ `useEffect(()=>{},[])`
+1. 💻 **key para cada chamada map()** _para não ocorrer erros é bom lembrar que cada item chamado de algum lugar usando a função `map()` precisa ter uma `key`, caso contrario vai dar erro por não conseguir especificar qual item é chamado_
+1. 💻 **Mudamos os arquivos jsx para tsx** _após as instalações do typescript fazemos estas alterações_
 </details>
 
 <details>
@@ -85,13 +127,13 @@ const isDevelopment = process.env.NODE_ENV !== "production";
 module.exports = {
   mode: isDevelopment ? "development" : "production", // deixa o tempo de execução mais rapido para modo de desenvolvimento
   devtool: isDevelopment ? "eval-source-map" : "source-map", //(sourcemaps) para visualizar os erros com mais especificidade direto no arquivo, podendo ver o erro direto do browser no devtools
-  entry: path.resolve(__dirname, "src", "index.jsx"),
+  entry: path.resolve(__dirname, "src", "index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", "ts", "tsx"],
   },
   devServer: {
     contentBase: path.resolve(__dirname, "public"),
@@ -107,7 +149,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.(j|t)sx$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -134,6 +176,7 @@ module.exports = {
 module.exports = {
   presets: {
     '@babel/preset-env',
+    '@babel/preset-typescript',
     ['@babel/preset-react', {
       runtime:'automatic'
     }]
@@ -151,11 +194,28 @@ module.exports = {
 ```
 
 - 📄 yarn.lock ➡ **_configura automaticamente_**
+- 📄 tsconfig.json ➡ **_configura automaticamente_**
+
+```json
+//mudanças, podemos remover todos os comentário e objetos não usados colocando um atalho para as ocorrencias
+"lib":["dom","dom.iterable","esnext"]
+"allowJs":true,
+"allowSyntheticDefaultImports":true,
+"moduleResolution":"node",
+"resolveJsonModule": true, //caso não existir criar
+"isolatedModules": true, //caso não existir criar
+"noEmit":true,
+"jsx":"react-jsx",
+"target":"es5", //remover
+"module":"commonjs", //remover
+//após incluir e remover dados apos o objeto compilerOptions incluimos
+"include": ["src"] // define onde o código da aplicação vai estar
+```
 
 <details>
 <summary ><strong> 📁 root/src </strong></summary>
 
-- 📄 App.jsx
+- 📄 App.tsx
 
 ```javascript
 import { RepositoryList } from "./components/RepositoryList";
@@ -171,9 +231,9 @@ export function App() {
 }
 ```
 
-- 📄 index.jsx
+- 📄 index.tsx
 
-```javascript
+```tsx
 /**
  * Para fazer o teste do dist/bundle.js do babel
 const user = {
@@ -190,10 +250,39 @@ render(<App />, document.getElementById("root"));
 
 <details>
 <summary ><strong> 📁 root/src/styles </strong></summary>
+- 📄 repositories.scss
+
+```scss
+section.repository-list {
+  margin: 40px;
+  h1 {
+    margin-bottom: 16px;
+  }
+  ul {
+    list-style: none;
+    li {
+      & + li {
+        margin-top: 20px;
+      }
+      p {
+        font-size: 14px;
+        color: #444;
+        margin-top: 8px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 16px;
+        text-decoration: none;
+        color: #8257e6;
+      }
+    }
+  }
+}
+```
 
 - 📄 global.scss
 
-```css
+```scss
 * {
   margin: 0;
   padding: 0;
@@ -227,37 +316,61 @@ export function Counter() {
 }
 ```
 
-- 📄 RepositoryItem.jsx
+- 📄 RepositoryItem.tsx
 
-```javascript
-export function RepositoryItem(props) {
+```tsx
+interface RepositoryItemProps {
+  repository: {
+    name: string;
+    description: string;
+    html_url: string;
+  };
+}
+export function RepositoryItem(props: RepositoryItemProps) {
   return (
     <li>
-      <strong>{props.repository?.name ?? "default"}</strong>
-      <p>{props.repository?.description}</p>
-      <a href={props.repository?.link}>Acessar repositórios</a>
+      <strong>{props.repository.name}</strong>
+      <p>{props.repository.description}</p>
+      <a href={props.repository.html_url}>Acessar repositórios</a>
     </li>
   );
 }
 ```
 
-- 📄 RepositoryList.jsx
+- 📄 RepositoryList.tsx
 
-```javascript
+```tsx
+import { useState, useEffect } from "react";
 import { RepositoryItem } from "./RepositoryItem";
-const repository = {
-  name: "unform",
-  description: "Forms in React",
-  link: "https://github.com/unform/unform",
-};
+import "../styles/repositories.scss";
+//Api que vai ser usada --> https://api.github.com/orgs/rocketseat/repos
+// const repository = {
+//   name: "unform",
+//   description: "Forms in React",
+//   link: "https://github.com/unform/unform",
+// };
+interface Repository {
+  name: string;
+  //para não dar erro colocamos todas os dados usados
+  description: string;
+  html_url: string;
+}
 export function RepositoryList() {
+  const [repositories, setRepositories] = useState<Repository[]>([]);
+  useEffect(() => {
+    fetch("https://api.github.com/orgs/rocketseat/repos")
+      .then((response) => response.json())
+      .the((data) => setRepositories(data));
+  }, []);
   return (
     <section>
       <h1>Lista de repositórios</h1>
       <ul>
-        <RepositoryItem repository={repository} />
-        <RepositoryItem />
-        <RepositoryItem />
+        {repositories.map((repository) => {
+          return (
+            <RepositoryItem key={repository.name} repository={repository} />
+          );
+        })}
       </ul>
     </section>
   );
