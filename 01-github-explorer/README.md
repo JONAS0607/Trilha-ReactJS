@@ -159,7 +159,7 @@ module.exports = {
 - 📄 yarn.lock ➡ **_configura automaticamente_**
 
 <details>
-<summary style="display:inline;"><strong> 📁 src </strong></summary>
+<summary style="display:inline;"><strong> 📁 root/src </strong></summary>
 
 - 📄 App.jsx
 
@@ -195,7 +195,7 @@ render(<App />, document.getElementById("root"));
 ```
 
 <details>
-<summary style="display:inline;"><strong> 📁 styles </strong></summary>
+<summary style="display:inline;"><strong> 📁 root/src/styles </strong></summary>
 
 - 📄 global.scss
 
@@ -214,7 +214,7 @@ body: {
 
 </details>
 <details>
-<summary style="display:inline;"><strong> 📁 components </strong></summary>
+<summary style="display:inline;"><strong> 📁 root/src/components </strong></summary>
 
 - 📄 Counter.jsx
 
@@ -272,9 +272,8 @@ export function RepositoryList() {
 
 </details>
 </details>
-</details>
 <details>
-<summary style="display:inline;"><strong> 📁 public </strong></summary>
+<summary style="display:inline;"><strong> 📁 root/public </strong></summary>
 
 - 📄 index.html
   _Configurando estrutura para que o React funcione_
@@ -295,4 +294,5 @@ export function RepositoryList() {
 </html>
 ```
 
+</details>
 </details>
