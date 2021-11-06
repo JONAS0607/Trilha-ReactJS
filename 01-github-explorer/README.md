@@ -99,6 +99,7 @@ export function App() {
 1. 💻 **Usando estado useEffect** _em conjunto com API, assim como o useState serve para disparar uma função quando algo acontecer como a mudança de uma variável avisando o aplicativo da mudança, quando a array do useEffect estiver vazia a função vai ser executada apenas uma vez quando o componente for usado, **importante** nunca esquecer o segundo parametro ou seja a array_ `useEffect(()=>{},[])`
 1. 💻 **key para cada chamada map()** _para não ocorrer erros é bom lembrar que cada item chamado de algum lugar usando a função `map()` precisa ter uma `key`, caso contrario vai dar erro por não conseguir especificar qual item é chamado_
 1. 💻 **Mudamos os arquivos jsx para tsx** _após as instalações do typescript fazemos estas alterações_
+1. 💻 **Reactdevtools** _extensão instalada no browser para analizarmos um site que usa react, analisar performace do aplicativo_
 </details>
 
 <details>
