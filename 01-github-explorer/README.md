@@ -1,7 +1,7 @@
 # 🔃 PASSOS DO PROJETO
 
 <details>
-<summary style="display:inline;"><h2 style="display:inline;"> ✅ Para rodar </h2></summary>
+<summary ><strong> ✅ Para rodar </strong></summary>
 
 ### 🚩 Executando a aplicação
 
@@ -16,11 +16,11 @@
 
 </details>
 
-### 📗 CONFIGURANDO O AMBIENTE
+### <h3 hidden>📗 CONFIGURANDO O AMBIENTE </h3>
 
 <details>
 
-<summary style="display:inline;"><h2 style="display:inline;"> 🔽 Instalações do projeto </h2></summary>
+<summary ><strong> 🔽 Instalações do projeto </strong></summary>
 
 1. 💻 `yarn init -y`
 1. 💻 `yarn add react`
@@ -41,11 +41,11 @@
 
 </details>
 
-### 📢 EXPLICAÇÕES ESPECIFICAS
+### <h3 hidden> 📢 EXPLICAÇÕES ESPECIFICAS </h3>
 
 <details>
 
-<summary style="display:inline;"><h2 style="display:inline;"> ✅ Explicações </h2></summary>
+<summary ><strong> ✅ Explicações </strong></summary>
 
 1. 💻 **COMPONETES** _basicamente um componente é uma função, forma de organizar, pedaços de código que juntos formam algo maior, normalmente a estrutura de um componente é uma função que retorna um html, no caso do react, exportamos ele do local que foi criado e importamos onde vamos usar, sempre que criarmos um componente iniciamos ele com a letra maiuscula, não criar mais de um componente em um mesmo arquivo_
 
@@ -63,13 +63,13 @@ export function App() {
 1. 💻 **Fast refresh** _forma de alterar o código da aplicação, mantendo o estado dos componentes valores já adicionados nas variáveis_
 </details>
 
-### 📁 PASTAS DO PROJETO
+### <h3 hidden>📁 PASTAS DO PROJETO</h3>
 
 <details>
-<summary style="display:inline;"><h2 style="display:inline;"> 🔽 Pastas e arquivos do projeto </h2></summary>
+<summary ><strong> 🔽 Pastas e arquivos do projeto </strong></summary>
 
 <details>
-<summary style="display:inline;"><strong> 📁 root </strong></summary>
+<summary ><strong> 📁 root </strong></summary>
 
 - 📄 .gitignore
 
@@ -159,7 +159,7 @@ module.exports = {
 - 📄 yarn.lock ➡ **_configura automaticamente_**
 
 <details>
-<summary style="display:inline;"><strong> 📁 root/src </strong></summary>
+<summary ><strong> 📁 root/src </strong></summary>
 
 - 📄 App.jsx
 
@@ -195,7 +195,7 @@ render(<App />, document.getElementById("root"));
 ```
 
 <details>
-<summary style="display:inline;"><strong> 📁 root/src/styles </strong></summary>
+<summary ><strong> 📁 root/src/styles </strong></summary>
 
 - 📄 global.scss
 
@@ -214,7 +214,7 @@ body: {
 
 </details>
 <details>
-<summary style="display:inline;"><strong> 📁 root/src/components </strong></summary>
+<summary ><strong> 📁 root/src/components </strong></summary>
 
 - 📄 Counter.jsx
 
@@ -273,7 +273,7 @@ export function RepositoryList() {
 </details>
 </details>
 <details>
-<summary style="display:inline;"><strong> 📁 root/public </strong></summary>
+<summary ><strong> 📁 root/public </strong></summary>
 
 - 📄 index.html
   _Configurando estrutura para que o React funcione_
