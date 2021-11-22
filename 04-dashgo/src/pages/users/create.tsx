@@ -12,6 +12,7 @@ import { Input } from '../../components/Form/Input';
 
 import { Header } from '../../components/Header/';
 import { SideBar } from '../../components/Sidebar/';
+import Link from 'next/link';
 
 export default function CreateUser() {
 	return (
@@ -19,17 +20,17 @@ export default function CreateUser() {
 			<Header />
 			<Flex w='100%' my='6' maxW={1480} mx='auto' px='6'>
 				<SideBar />
-				<Box flex='1' borderRadius={8} bg='gray.700' p='8'>
+				<Box flex='1' borderRadius={8} bg='gray.700' p={['6', '8']}>
 					<Heading size='lg' fontWeight='normal'>
 						Criar usuário
 					</Heading>
 					<Divider my='6' borderColor='gray.500' />
 					<VStack>
-						<SimpleGrid minChildWidth='240px' spacing='8' w='100%'>
+						<SimpleGrid minChildWidth='240px' spacing={['6', '8']} w='100%'>
 							<Input name='name' label='Nome completo' />
 							<Input name='email' type='email' label='E-mail' />
 						</SimpleGrid>
-						<SimpleGrid minChildWidth='240px' spacing='8' w='100%'>
+						<SimpleGrid minChildWidth='240px' spacing={['6', '8']} w='100%'>
 							<Input name='password' label='Senha' type='password' />
 							<Input
 								name='password_confirmation'
@@ -40,7 +41,11 @@ export default function CreateUser() {
 					</VStack>
 					<Flex mt='8' justify='flex-end'>
 						<HStack spacing='4'>
-							<Button colorScheme='whiteAlpha'>Cancelar</Button>
+							<Link href='/users' passHref>
+								<Button as='a' colorScheme='whiteAlpha'>
+									Cancelar
+								</Button>
+							</Link>
 							<Button colorScheme='pink'>Salvar</Button>
 						</HStack>
 					</Flex>
