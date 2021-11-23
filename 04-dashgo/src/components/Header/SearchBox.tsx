@@ -7,7 +7,7 @@ export function SearchBox() {
 	// uncontrolled with ref
 	const serchInputRef = useRef<HTMLInputElement>(null);
 	//pegando o valor de ref
-	console.log(serchInputRef.current.value);
+	// console.log(serchInputRef.current.value);
 	return (
 		<Flex
 			as='label'
